@@ -135,7 +135,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         var slots = this.$slots.default;
         if (slots && slots.length === 1) {
           var child = slots[0];
-          if (child.componentOptions && child.componentOptions.tag === "transition-group") {
+          if (child.componentOptions && ["transition-group", "TransitionGroup"].includes(child.componentOptions.tag)) {
             this.transitionMode = true;
           }
         }
